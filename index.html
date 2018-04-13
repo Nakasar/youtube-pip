@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body style="-webkit-app-region: drag; text-align: center">
+    <div style="width: 560px; height: 35px; background-color: black; display: inline-block;">
+      <form id="videoForm" style="margin: 0; -webkit-app-region: no-drag; text-align: left; width: 80%; height: 100%; display: inline-block;">
+        <input id="videoUrl" type="text" style="border: 0; background-color: black; color: white; width: 100%; height: 100%; display: inline-block;" value="1xLOP1Eeawg"/>
+      </form>
+      <button id="close" style="margin: 0; display: inline-block; -webkit-app-region: no-drag; width: 30px; height: 30px; background-color: darkred; color: white;">X</button>
+    </div>
+    <iframe id="video" style="-webkit-app-region: no-drag;" width="560" height="315" src="https://www.youtube.com/embed/hKRUPYrAQoE?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    <script>
+      const ipc = require('electron').ipcRenderer;
+      document.getElementById('close').addEventListener('click', () => {
+        ipc.send('close');
+      });
+      document.getElementById('videoForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+        let url = document.getElementById('videoUrl').value;
+        document.getElementById('video').src = `https://www.youtube.com/embed/${url}?showinfo=0`;
+      });
+    </script>
+  </body>
+</html>

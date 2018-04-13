@@ -1,0 +1,22 @@
+{
+  "name": "youtube-pip",
+  "version": "1.0.0",
+  "description": "Display a youtube video in front of everything else.",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Youtube",
+    "PIP",
+    "Electron"
+  ],
+  "author": "Kevin \"Nakasar\" Thizy",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.8.4"
+  },
+  "dependencies": {
+    "pug": "^2.0.3"
+  }
+}
