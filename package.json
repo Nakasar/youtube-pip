@@ -1,5 +1,6 @@
 {
   "name": "youtube-pip",
+  "productName": "Youtube PIP",
   "version": "1.0.0",
   "description": "Display a youtube video in front of everything else.",
   "main": "app.js",
@@ -14,9 +15,6 @@
   "author": "Kevin \"Nakasar\" Thizy",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^1.8.4"
-  },
-  "dependencies": {
-    "pug": "^2.0.3"
+    "electron": "1.4.15"
   }
 }

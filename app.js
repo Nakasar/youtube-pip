@@ -5,7 +5,6 @@ const ipc = electron.ipcMain;
 
 const path = require('path');
 const url = require('url');
-const pug = require('pug');
 
 let mainWindow;
 
